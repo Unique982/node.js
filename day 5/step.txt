@@ -1,0 +1,4 @@
+step 1. npm init 
+step 2 . npm start
+step 3. npm install nodemon  --save -dev
+step 4. npm install nodemon -g 
