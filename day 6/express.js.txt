@@ -1,0 +1,28 @@
+step 1: npm install express --save
+
+// extrnal module
+step2 : require(express);
+
+// create APP
+step 3 : const app = express();
+
+// step 4: adding middleware 
+app.use((req,res,next)=>{
+  console.log("first middleware");
+  next();
+})
+app.use((req,res,next)=>{
+  console.log("Second Middleware");
+  next();
+})
+
+ step 4:Send request 
+ res.send("<h1>Welcome to Admin Dashboard");
+
+  step 5: Handling Routes
+Route paths based on strings
+This route path will match requests to the root route, /.
+
+app.get('/', (req, res) => {
+  res.send('root')
+})
