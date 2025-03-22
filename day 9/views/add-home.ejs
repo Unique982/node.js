@@ -1,0 +1,17 @@
+<%-include('partials/head')%>
+  </head>
+
+  <body>
+    <%-include('partials/nav')%>
+    
+    <main class="container mx-auto mt-8 bg-white rounded-lg shadow-md">
+      <h1> Register Form</h1>
+      <form action="/host/add_home" method="POST">
+        <label>Name:</label>
+        <input type="text" name="house_name" placeholder="Enter House">
+        
+        <input type="submit"  value="Submit">
+        </form>
+
+    </main>
+    <%-include('partials/footer')%>

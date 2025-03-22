@@ -1,0 +1,15 @@
+// install npm
+step 1: npm i -D tailwindcss@3 postcss autoprefixer
+
+// contigure 
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./views/**/*.{html}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+ // step 3: 
+npx tailwindcss init
