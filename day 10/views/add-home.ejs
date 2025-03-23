@@ -1,0 +1,31 @@
+<%-include('partials/head')%>
+  </head>
+
+  <body>
+    <%-include('partials/nav')%>
+    
+    <header>
+      <h1> Register Form</h1>
+    </header>
+    <main class="container mx-auto mt-8 bg-white rounded-lg shadow-md">
+      <form action="/host/add_home" method="POST">
+        <label>Name:</label>
+        <input type="text" name="house_name" placeholder="Enter House" class="">
+        <br>
+        <label>Price:</label>
+        <input type="number" name="price" placeholder="Enter Price">
+        <br>
+        <label>Location:</label>
+        <input type="text" name="location" placeholder="Enter Location">
+        <br>
+        <label>Rating:</label>
+        <input type="text" name="rating" placeholder="Enter rating">
+        <br>
+        <label>Photo:</label>
+        <input type="file" name="photo">
+        <br>
+        <input type="submit" value="Submit">
+        </form>
+
+    </main>
+    <%-include('partials/footer')%>

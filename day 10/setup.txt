@@ -1,0 +1,12 @@
+// day 10 Model View Controller (MVC)
+MVC stands for Model-View-Controller: A software architectural pattern for developing user interfaces.
+
+Model: Manages the data and business logic of the application.
+
+View: Handles the display and presentation of data to the user.
+
+Controller: Processes user input, interacts with the Model, and Updates the view accordingly.
+
+Routes are a part of Controllers.
+
+Purpose: MVC separates concerns within an application, Making it easier to manage.
