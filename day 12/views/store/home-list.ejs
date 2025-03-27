@@ -1,0 +1,36 @@
+<%- include('../partials/head') %>
+</head>
+<body class="bg-light">
+  <%- include('../partials/nav') %>
+
+  <div class="container mt-5">
+    <h1 class="text-center text-primary fw-bold mb-4">Welcome to Home Page</h1>
+
+    <div class="row justify-content-center">
+      <% registerHome.forEach(home => { %>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <img src="<%= home.photo %>" class="card-img-top" alt="Room Image">
+          <div class="card-body">
+            <h5 class="card-title">House Name :<%= home.house_name %></h5>
+            <p class="card-text"><strong>Location:</strong> <%= home.localtion %></p>
+            <p class="card-text">
+              <strong>Rating:</strong> ⭐⭐⭐⭐ <span class="text-muted">(<%= home.rating %>)</span>
+            </p>
+            <p class="card-text"><strong>Price:</strong> <%= home.price %></p>
+            <div class="d-flex justify-content-between">
+              <a href="/homes/<%= home.id %>" class="btn btn-primary">Details</a>
+              <!-- <button class="btn btn-success">Book Now</button> -->
+          
+                <%-include('../partials/favorites',{home:home})%>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+
+  <%- include('../partials/footer') %>
+

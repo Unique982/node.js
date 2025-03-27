@@ -1,0 +1,12 @@
+// Introduction To SQL.
+1. What is a DB(Database)
+2. Introduction to SQL DB.
+3. Introduction to NoSQL DB
+4. SQL vs NoSQL
+5. Installing MYSQL
+6. Connecting App to Database
+7. Creating Homes Table.
+8. Querying homes in App.
+9. Adding DB in models.
+10. Adding Home in Model.
+11. Implementing Model using Where
