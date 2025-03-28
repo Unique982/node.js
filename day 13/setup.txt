@@ -1,0 +1,11 @@
+// day 11 Dynamic path and model deep-dive part 1
+1. what are dynamic path
+2. Adding Home Details page
+3. Showing Real Home Data
+4. Adding facourites fetaure.
+5. Adding Favourites Model.
+6. Edit-home: Adding fetaure Skeleton.
+7. Edit-Home :Showing existing Data.
+8. Edit-Home: Handling Edit Reqquest.
+9. Adding Delete Feature.
+10. Removing Home from Favourites.

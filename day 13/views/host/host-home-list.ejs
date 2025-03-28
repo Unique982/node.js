@@ -1,0 +1,41 @@
+<%- include('../partials/head') %>
+</head>
+<body class="bg-light">
+  <%- include('../partials/nav') %>
+  <section class="bg-dark text-white text-center py-5">
+    <h1>Welcome to Host Home</h1>
+    <p>Luxury & Comfort at Affordable Prices</p>
+</section>
+  <div class="container mt-5">
+    
+
+    <div class="row justify-content-center">
+      <% registerHome.forEach(home => { %>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <img src="<%= home.imageUrl %>" class="card-img-top" alt="Room Image">
+          <div class="card-body">
+            <h5 class="card-title">House Name:<%= home.houseName %></h5>
+            <p class="card-text"><strong>Location:</strong> <%= home.location %></p>
+            <p class="card-text">
+              <strong>Rating:</strong> ⭐⭐⭐⭐ <span class="text-muted">(<%= home.rating %>)</span>
+            </p>
+            <p class="card-text"><strong>Price:</strong> <%= home.price %></p>
+            <div class="d-flex justify-content-between">
+              <a href="/host/edit-home/<%= home._id %>?editing=true" class="btn btn-success btn-sm">Edit</a>
+             <form action="/host/delete-home/<%=home._id %>" method="POST">
+              <button type="submit" class="btn btn-danger">Delete</button>
+             </form>
+              <!-- <button class="btn btn-success">Book Now</button> -->
+          
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+
+  <%- include('../partials/footer') %>
+

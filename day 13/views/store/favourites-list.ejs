@@ -1,0 +1,51 @@
+<%-include('../partials/head')%>
+  </head>
+  <body class="bg-gray-100 font-serif">
+    <%-include('../partials/nav')%>
+ 
+    <section class="bg-dark text-white text-center py-5">
+      <h1>Welcome to FavouritesHome</h1>
+      <p>Luxury & Comfort at Affordable Prices</p>
+  </section>
+ 
+    <main class="container mx-auto bg-white shadow-md rounded-lg p-8 mt-10 max-w-xl">
+      <div class="flex flex-wrap justify-center gap-6">
+        <% favouritesHome.forEach(home =>{ %>
+        <!-- Card 1 -->
+        <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
+
+          <img src="<%= home.imageUrl %>" alt="Room Image" class="w-full h-48 object-cover">
+          <div class="p-4">
+            
+            <h2 class="text-xl font-semibold text-gray-800"><%= home.houseName %></h2>
+            <p class="text-gray-600 text-sm mt-1">Location: <%=home.location%></p>
+            <div class="flex items-center mt-2">
+              <span class="text-yellow-500 text-sm mr-2">⭐⭐⭐⭐</span>
+              <span class="text-gray-600 text-sm"><%=home.reating %></span>
+            </div>
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-xl font-semibold text-gray-800">Price: <%=home.price%></span>
+              <div class="flex space-x-4">
+              <form action="/favourites/delete/:<%=home._id %>" method="POST">
+                <button type="submit" class="btn btn-danger">Remove Favouitres</button>
+              </form>
+               
+              </div>
+            </div>
+            <hr class="w-100">
+            <br>
+          <% }) %>
+        </div>
+        
+         
+    
+
+        </div>
+    
+      
+  
+  
+    </main>
+    <%-include('../partials/footer')%>
+
+
