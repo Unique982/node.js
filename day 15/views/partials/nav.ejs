@@ -1,0 +1,35 @@
+<header class="bg-lime-100 text-black p-2 shadow-md">
+  <nav class="container mx-auto flex justify-between item-center">
+   
+    <ul class="flex space-x-2">
+      <li><a href="/" class="hover:bg-blue-400 py-2 px-4 rounded trasition duration-300"> Home</a></li>
+      <% if(isLoggedIn){ %>
+      <li><a href="/home" class="hover:bg-blue-400 py-2 px-4 rounded trasition duration-300"> Home List</a></li>
+      <li><a href="/booking" class="hover:bg-red-400 py-2 px-4 rounded trasition duration-300">Booking</a></li>
+      <li><a href="/favourites" class="hover:bg-red-400 py-2 px-4 rounded trasition duration-300">Favourites</a></li>
+      <li><a href="/host/add_home" class="hover:bg-red-400 py-2 px-4 rounded trasition duration-300">Add Home</a></li>
+      
+    </ul>
+    <ul>
+
+    
+    <li><a href="/host/host-home-list" class="hover:bg-red-400 py-2 px-4 rounded trasition duration-300">Host Home</a></li>
+    </ul>
+    <% } %>
+    <ul>
+      <li>
+        <% if(isLoggedIn){ %>
+        <a href="/auth/login" class="hover:bg-red-400 py-2 px-4 rounded trasition duration-300">Login</a>
+        <% } else {%>
+          <form action="/auth/logout" method="POST">
+            <button type="submit">Logout</button>
+        
+          </form>
+          <% } %>
+      
+      </li>
+        
+    </ul>
+  </nav>
+
+</header>
