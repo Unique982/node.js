@@ -1,0 +1,38 @@
+<header class="bg-lime-100 text-black p-2 shadow-md">
+  <h1 class="text-red-500"></h1>
+  <nav class="container mx-auto flex justify-between items-center">
+    <ul class="flex space-x-2">
+      
+      <% if (isLoggedIn) { %>
+        <% if (user && user.userType==='guest') { %>
+        <li><a href="/" class="hover:bg-blue-400 py-2 px-4 rounded transition duration-300">Home</a></li>
+        <li><a href="/booking" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Booking</a></li>
+        <li><a href="/favourites" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Favourites</a>
+        </li>
+
+        <% } else{  %>
+        <li><a href="/host/add_home" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Add Home</a>
+        </li>
+        <li><a href="/host/host-home-list" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Host Home</a></li>
+        <% } } %>
+    </ul>
+
+   
+
+
+    <ul>
+      <% if (!isLoggedIn) { %>
+        <li>
+          <a href="/login" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Login</a>
+          <a href="/signup" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Register</a>
+        </li>
+      <% } else { %>
+        <li>
+          <form action="/logout" method="POST">
+            <button type="submit" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Logout</button>
+          </form>
+        </li>
+      <% } %>
+    </ul>
+  </nav>
+</header>

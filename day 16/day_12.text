@@ -1,0 +1,13 @@
+// Authentication and Authorization
+1.What is Authentication
+2. What is Authorization
+3. Session baseed Authentication
+4. Authentication vs Authorization
+5. Singup Ui
+6. Using Express Validator
+7. Adding User Model.
+8. Encrypting Password.
+9. Adding User Functions
+
+
+npm install express-validator
