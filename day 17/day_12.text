@@ -1,0 +1,13 @@
+//File upload and Download
+1.Adding a file picker
+2. Creating Multipart form
+3. Handling Multipart form data 
+4. Saving Image Files
+5. Custom file Name
+6. Restricting Upload file types
+7.Handling Edits
+8. Serving saved data.
+9.  Serving files after Auth
+10.Deleting files
+
+npm install express-validator
