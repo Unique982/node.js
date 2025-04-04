@@ -1,0 +1,14 @@
+// REST API/ JSON Request
+1. What are Async Request
+2. What are REST APIs
+3. Decoupling Frontend And Backend
+4. Routes & HTTP Methods
+5. REST core concepts
+6. First API Todo App
+7.API for Fetch Items
+8.API foe Deleting Items 
+9. Improving UI Elements
+10. Adding Complete Item Functionality
+11.Deploying Request App
+
+npm install express-validator
